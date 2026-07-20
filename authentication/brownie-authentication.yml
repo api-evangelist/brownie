@@ -1,0 +1,37 @@
+generated: '2026-07-18'
+method: searched
+source: https://docs.incidentfox.ai/api-reference/authentication
+docs: https://docs.incidentfox.ai/api-reference/authentication
+summary:
+  types: [http, openIdConnect]
+  http_schemes: [bearer]
+  transport: Authorization header, Bearer token
+schemes:
+- name: teamToken
+  type: http
+  scheme: bearer
+  description: >-
+    Team token scoped to a single team within an organization. Format
+    "tokid.toksecret" where tokid is the public identifier and toksecret is
+    the secret. Can read/update team configuration, trigger investigations,
+    and view investigation history. Cannot access other teams or modify
+    organization settings. Issued by an organization admin in the Web UI
+    (Admin Console > Teams > Generate Token) and shown once.
+  header: 'Authorization: Bearer tokid.toksecret'
+- name: adminToken
+  type: http
+  scheme: bearer
+  description: >-
+    Admin token providing organization-wide access - manage all teams, view
+    audit logs, configure organization settings, and create/revoke team
+    tokens. Format "admin.tokensecret".
+  header: 'Authorization: Bearer admin.tokensecret'
+- name: oidc
+  type: openIdConnect
+  description: >-
+    User-based authentication via the organization's identity provider (SSO).
+    Configured in organization settings with issuer, client_id, and
+    client_secret; presented as a standard JWT bearer token.
+notes:
+- All API endpoints require authentication via a Bearer token.
+- Write operations require a team token with write permissions.
