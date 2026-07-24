@@ -1,0 +1,54 @@
+generated: '2026-07-18'
+method: derived
+source: >-
+  Derived from the IncidentFox API reference (agents/run, agents/status,
+  config/me/effective, config/me) at https://docs.incidentfox.ai/api-reference/
+note: >-
+  No usable OpenAPI is published (the docs host serves the default Mintlify
+  "Plant Store" sample at api-reference/openapi.json), so entities are derived
+  from the documented request/response shapes.
+entities:
+- name: Organization
+  description: Top of the configuration hierarchy; owns teams, OIDC settings, and admin tokens.
+  id_prefix: null
+- name: Team
+  description: A team within an organization; scope of a team token and effective config.
+  key_fields: [team_name]
+- name: Investigation
+  description: An AI investigation run; created by run_agent and polled by status.
+  id_prefix: inv_
+  key_fields: [investigation_id, status, agent, message, result, started_at, completed_at]
+  statuses: [running, completed, failed]
+- name: Agent
+  description: A named investigation agent (planner, investigation_agent, k8s_agent, aws_agent, coding_agent).
+  key_fields: [agent_name]
+- name: TeamConfig
+  description: Hierarchical, deep-merged team configuration (mcp_servers, a2a_agents, agents, feature_flags, knowledge_source, webhooks).
+  key_fields: [version, mcp_servers, agents, feature_flags]
+- name: Token
+  description: Team or admin bearer token (format tokid.toksecret / admin.tokensecret).
+  types: [team, admin]
+- name: RequestMeta
+  description: Response envelope metadata carrying request_id and timestamp.
+  id_prefix: req_
+relationships:
+- from: Organization
+  to: Team
+  type: has_many
+- from: Team
+  to: Token
+  type: has_many
+- from: Team
+  to: TeamConfig
+  type: has_one
+- from: Team
+  to: Investigation
+  type: has_many
+- from: Investigation
+  to: Agent
+  type: belongs_to
+  via: agent
+- from: TeamConfig
+  to: Agent
+  type: has_many
+  via: agents

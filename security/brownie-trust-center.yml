@@ -1,0 +1,23 @@
+generated: '2026-07-18'
+method: searched
+probe: true
+source: https://docs.incidentfox.ai/security
+url: https://docs.incidentfox.ai/security
+certifications:
+- SOC 2 Type II
+- GDPR
+posture:
+- Envoy-based credentials proxy - secrets never touch the agent; dynamic credential injection at request time
+- Claude SDK SRE agent runs in isolated Kubernetes sandboxes with gVisor user-space kernel isolation
+- Egress-restricted network policies (HTTPS/443 only) and bounded CPU/memory/time resource limits
+- Ephemeral sandboxes destroyed after each investigation
+- Full audit trail of agent actions; human approval gates on all write operations
+evidence:
+- source: https://docs.incidentfox.ai/security
+  keywords:
+  - soc 2 type ii
+  - compliance certification
+- source: https://incidentfox.ai/sub-processors.html
+  keywords:
+  - soc 2
+  - gdpr

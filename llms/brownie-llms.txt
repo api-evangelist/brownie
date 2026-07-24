@@ -1,0 +1,53 @@
+# IncidentFox
+
+## Docs
+
+- [Run Agent](https://docs.incidentfox.ai/api-reference/agent/run.md): Trigger an investigation via the API
+- [Investigation Status](https://docs.incidentfox.ai/api-reference/agent/status.md): Check the status of an investigation
+- [Authentication](https://docs.incidentfox.ai/api-reference/authentication.md): Authenticate with the IncidentFox API
+- [Get Effective Config](https://docs.incidentfox.ai/api-reference/config/effective.md): Retrieve your team's effective configuration
+- [Update Config](https://docs.incidentfox.ai/api-reference/config/update.md): Update your team's configuration
+- [API Introduction](https://docs.incidentfox.ai/api-reference/introduction.md): Overview of the IncidentFox REST API
+- [Agent Configuration](https://docs.incidentfox.ai/configuration/agents.md): Configure agent behavior, prompts, and tool access
+- [Configuration Overview](https://docs.incidentfox.ai/configuration/overview.md): Understanding IncidentFox configuration hierarchy and options
+- [System Prompts](https://docs.incidentfox.ai/configuration/prompts.md): Advanced guide to writing effective agent prompts
+- [Tool Configuration](https://docs.incidentfox.ai/configuration/tools.md): Enable, configure, and customize IncidentFox tools
+- [AWS](https://docs.incidentfox.ai/data-sources/aws.md): Connect IncidentFox to AWS for CloudWatch, EC2, RDS, Lambda, and more
+- [Coralogix](https://docs.incidentfox.ai/data-sources/coralogix.md): Connect IncidentFox to Coralogix for log search, metrics, and alerts
+- [Datadog](https://docs.incidentfox.ai/data-sources/datadog.md): Connect IncidentFox to Datadog for metrics, logs, and APM
+- [Docker](https://docs.incidentfox.ai/data-sources/docker.md): Connect IncidentFox to Docker for container troubleshooting
+- [Elasticsearch](https://docs.incidentfox.ai/data-sources/elasticsearch.md): Connect IncidentFox to Elasticsearch for log search and analysis
+- [Grafana](https://docs.incidentfox.ai/data-sources/grafana.md): Connect IncidentFox to Grafana for dashboards and Prometheus queries
+- [Kubernetes](https://docs.incidentfox.ai/data-sources/kubernetes.md): Connect IncidentFox to your Kubernetes clusters
+- [Data Sources Overview](https://docs.incidentfox.ai/data-sources/overview.md): Connect IncidentFox to your observability stack
+- [Prometheus](https://docs.incidentfox.ai/data-sources/prometheus.md): Connect IncidentFox to Prometheus for metrics queries and alerting
+- [Sentry](https://docs.incidentfox.ai/data-sources/sentry.md): Connect IncidentFox to Sentry for error tracking and issue analysis
+- [Snowflake](https://docs.incidentfox.ai/data-sources/snowflake.md): Use Snowflake data to enrich incident investigations
+- [How It Works](https://docs.incidentfox.ai/how-it-works.md): Understanding IncidentFox's dual-runtime architecture and RAPTOR knowledge system
+- [IncidentFox](https://docs.incidentfox.ai/index.md): AI-powered incident investigation and infrastructure automation
+- [GitHub](https://docs.incidentfox.ai/integrations/github.md): Set up IncidentFox GitHub integration for CI/CD analysis
+- [Incident.io](https://docs.incidentfox.ai/integrations/incident-io.md): Integrate IncidentFox with Incident.io for automated incident response
+- [Kubernetes Agent](https://docs.incidentfox.ai/integrations/kubernetes-agent.md): Connect your on-premise or private Kubernetes clusters to IncidentFox SaaS without firewall changes
+- [Integrations Overview](https://docs.incidentfox.ai/integrations/overview.md): Connect IncidentFox to your collaboration and incident management tools
+- [PagerDuty](https://docs.incidentfox.ai/integrations/pagerduty.md): Auto-investigate when PagerDuty alerts fire
+- [Slack](https://docs.incidentfox.ai/integrations/slack.md): Set up the IncidentFox Slack bot for investigations
+- [Knowledge Base](https://docs.incidentfox.ai/knowledge-base.md): RAPTOR hierarchical knowledge retrieval and pattern learning
+- [Quick Start](https://docs.incidentfox.ai/quickstart.md): Get IncidentFox investigating incidents in minutes
+- [Security](https://docs.incidentfox.ai/security.md): Security architecture, compliance, and best practices
+- [Anomaly Detection Tools](https://docs.incidentfox.ai/tools/anomaly-detection.md): AI-powered anomaly detection, forecasting, and correlation analysis
+- [AWS Tools](https://docs.incidentfox.ai/tools/aws.md): Tools for AWS infrastructure troubleshooting
+- [Custom MCP Tools](https://docs.incidentfox.ai/tools/custom-mcp.md): Extend IncidentFox with your own tools via Model Context Protocol
+- [GitHub Tools](https://docs.incidentfox.ai/tools/github.md): Tools for code search, PRs, issues, and GitHub Actions
+- [Kubernetes Tools](https://docs.incidentfox.ai/tools/kubernetes.md): Tools for Kubernetes troubleshooting and monitoring
+- [Log Analysis Tools](https://docs.incidentfox.ai/tools/log-analysis.md): Advanced log analysis capabilities for pattern detection and anomaly identification
+- [Observability Tools](https://docs.incidentfox.ai/tools/observability.md): Tools for metrics, logs, and traces from observability platforms
+- [Tools Catalog](https://docs.incidentfox.ai/tools/overview.md): Complete reference of 300+ tools available in IncidentFox
+
+## OpenAPI Specs
+
+- [openapi](https://docs.incidentfox.ai/api-reference/openapi.json)
+
+## Optional
+
+- [GitHub](https://github.com/incidentfox/incidentfox)
+- [Support](mailto:support@incidentfox.ai)

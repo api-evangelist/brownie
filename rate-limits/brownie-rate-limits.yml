@@ -1,0 +1,20 @@
+generated: '2026-07-18'
+method: searched
+source: https://docs.incidentfox.ai/api-reference/introduction
+docs: https://docs.incidentfox.ai/api-reference/introduction
+signaling:
+  headers: true
+  status_code: 429
+rate_limits:
+- endpoint_type: Read operations
+  limit_count: 100
+  window: minute
+  limit: 100/minute
+- endpoint_type: Write operations
+  limit_count: 20
+  window: minute
+  limit: 20/minute
+- endpoint_type: Investigation triggers
+  limit_count: 10
+  window: minute
+  limit: 10/minute

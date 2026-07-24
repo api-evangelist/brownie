@@ -1,0 +1,31 @@
+generated: '2026-07-18'
+method: searched
+source: https://docs.incidentfox.ai/api-reference/introduction
+docs: https://docs.incidentfox.ai/api-reference/introduction
+format: custom-json
+envelope:
+  shape: '{ "error": { "code": "<slug>", "message": "<human message>", "request_id": "req_..." } }'
+  fields: [code, message, request_id]
+  note: >-
+    IncidentFox uses a custom error envelope (not RFC 9457 application/problem+json).
+    Errors are keyed by an HTTP status code and a machine-readable "code" slug.
+problems:
+- status: 400
+  title: Bad request
+  meaning: The request was malformed or missing required parameters.
+- status: 401
+  code: unauthorized
+  title: Unauthorized
+  meaning: Missing, invalid, or expired bearer token.
+- status: 403
+  title: Forbidden
+  meaning: Authenticated but not permitted for this team/resource or scope (e.g. write without write permission).
+- status: 404
+  title: Not found
+  meaning: The requested resource (e.g. investigation_id) does not exist.
+- status: 429
+  title: Rate limited
+  meaning: Rate limit exceeded for the endpoint class; see rate-limits/brownie-rate-limits.yml.
+- status: 500
+  title: Server error
+  meaning: Unexpected server-side error.

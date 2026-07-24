@@ -1,0 +1,29 @@
+generated: '2026-07-18'
+method: derived
+status: candidate
+source: https://docs.incidentfox.ai/api-reference/introduction
+note: >-
+  No official hosted/remote IncidentFox MCP server was found. IncidentFox is
+  itself an MCP *client* platform (it consumes custom MCP tools and 300+
+  integrations to run investigations). The tools below are a CANDIDATE MCP
+  surface derived one-per-operation from the documented REST API so an agent
+  could drive IncidentFox programmatically.
+server:
+  name: incidentfox
+  transport: http
+tools:
+- name: run_agent
+  description: Trigger an AI investigation with a named agent and a natural-language message.
+  source_operation: POST /api/v1/agents/run
+- name: get_investigation_status
+  description: Get the status and results of an investigation by id.
+  source_operation: GET /api/v1/agents/status/{investigation_id}
+- name: get_effective_config
+  description: Retrieve the authenticated team's fully merged effective configuration.
+  source_operation: GET /api/v1/config/me/effective
+- name: update_config
+  description: Deep-merge partial configuration overrides into the team's config.
+  source_operation: PUT /api/v1/config/me
+- name: list_teams
+  description: List teams in the organization (admin token).
+  source_operation: GET /api/v1/admin/teams

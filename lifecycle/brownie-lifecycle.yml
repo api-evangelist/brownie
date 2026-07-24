@@ -1,0 +1,25 @@
+generated: '2026-07-18'
+method: searched
+source: https://docs.incidentfox.ai/api-reference/introduction
+versioning:
+  scheme: uri-path
+  current: v1
+  base: https://api.incidentfox.ai/api/v1
+  docs: https://docs.incidentfox.ai/api-reference/introduction
+deprecation:
+  policy_url: null
+  sunset_header: null
+  note: No formal deprecation/sunset policy is published in the public docs.
+sla:
+  url: null
+  uptime_target: null
+status_page:
+  url: null
+  note: >-
+    No provisioned status page found. incidentfox.statuspage.io resolves to the
+    default unclaimed Atlassian Statuspage template, not an operational status page.
+source_status:
+  repo: https://github.com/incidentfox/incidentfox
+  state: archived (read-only) 2026-05-31
+  license: Apache-2.0 (core) + Business Source License 1.1 (security layer)
+deprecated_operations: []

@@ -1,0 +1,12 @@
+generated: '2026-07-18'
+method: generated
+source: https://docs.incidentfox.ai/api-reference/introduction
+skills:
+- file: brownie-run-investigation.md
+  name: Run an incident investigation and retrieve the result
+  api: IncidentFox REST API
+  operations: [run_agent, get_investigation_status, get_effective_config]
+- file: brownie-manage-team-config.md
+  name: Read and update IncidentFox team configuration
+  api: IncidentFox REST API
+  operations: [get_effective_config, update_config]

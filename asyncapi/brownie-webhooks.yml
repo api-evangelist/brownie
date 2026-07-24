@@ -1,0 +1,29 @@
+generated: '2026-07-18'
+method: searched
+source: https://docs.incidentfox.ai/api-reference/introduction
+spec_type: Webhooks
+note: >-
+  IncidentFox documents outbound webhooks for delivering investigation results
+  out of band; no published AsyncAPI document was found. Configured via team
+  config (webhooks.investigation_complete = target URL).
+transport: HTTP POST (JSON) to a subscriber-configured URL
+configuration:
+  field: webhooks.investigation_complete
+  example: 'https://your-app.com/webhooks/incidentfox'
+events:
+- name: investigation_complete
+  description: Fired when an investigation finishes; delivers the summary, root cause, and recommendations.
+  payload_fields:
+  - event
+  - investigation_id
+  - summary
+  - root_cause
+  - recommendations
+  example: |
+    {
+      "event": "investigation_complete",
+      "investigation_id": "inv_abc123",
+      "summary": "Root cause identified",
+      "root_cause": { },
+      "recommendations": [ ]
+    }

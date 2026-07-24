@@ -1,0 +1,49 @@
+generated: '2026-07-18'
+method: searched
+source: https://docs.incidentfox.ai/api-reference/introduction
+docs: https://docs.incidentfox.ai/api-reference/introduction
+authentication:
+  style: bearer-token
+  header: Authorization
+  detail: authentication/brownie-authentication.yml
+base_url: https://api.incidentfox.ai/api/v1
+media_type: application/json
+response_envelope:
+  success:
+    shape: '{ "data": {...}, "meta": { "request_id": "req_...", "timestamp": "<ISO-8601>" } }'
+    data_field: data
+    meta_field: meta
+  note: >-
+    Some endpoints (config update, investigation status) return a flat
+    resource object rather than the data/meta envelope.
+error_envelope:
+  shape: '{ "error": { "code": "<slug>", "message": "<human message>", "request_id": "req_..." } }'
+  fields: [code, message, request_id]
+  detail: errors/brownie-problem-types.yml
+request_tracing:
+  request_id: true
+  location: meta.request_id (success) / error.request_id (errors)
+  format: req_...
+versioning:
+  scheme: uri-path
+  current: v1
+  base: https://api.incidentfox.ai/api/v1
+  detail: lifecycle/brownie-lifecycle.yml
+rate_limiting:
+  documented: true
+  detail: rate-limits/brownie-rate-limits.yml
+  headers: true
+idempotency:
+  documented: false
+  note: No idempotency-key header or retention policy is documented in the public API reference.
+pagination:
+  documented: false
+  note: No cursor/offset pagination parameters are documented for the current endpoint set.
+async_processing:
+  supported: true
+  note: >-
+    POST /agents/run accepts an "async" boolean; when true the call returns
+    immediately with an investigation_id to poll via
+    GET /agents/status/{investigation_id}. Optional webhooks
+    (investigation_complete) deliver results out of band.
+  detail: asyncapi/brownie-webhooks.yml

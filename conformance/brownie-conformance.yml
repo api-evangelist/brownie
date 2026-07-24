@@ -1,0 +1,28 @@
+generated: '2026-07-18'
+method: searched
+source: https://docs.incidentfox.ai/api-reference/authentication
+standards:
+- id: oauth2
+  conforms: false
+  evidence: API uses static bearer team/admin tokens, not an OAuth2 authorization flow.
+- id: openid-connect
+  conforms: true
+  evidence: OIDC/SSO user authentication configured with issuer/client_id/client_secret; JWT bearer tokens.
+- id: bearer-token-auth
+  conforms: true
+  evidence: All endpoints require Authorization Bearer tokens (RFC 6750 style).
+- id: rfc9457-problem-details
+  conforms: false
+  evidence: Custom error envelope { error:{ code, message, request_id } }, not application/problem+json.
+- id: soc2-type-ii
+  conforms: true
+  evidence: SOC 2 Type II certification stated in security docs (security/brownie-trust-center.yml).
+- id: gdpr
+  conforms: true
+  evidence: GDPR referenced in sub-processors and security posture.
+- id: rate-limit-signaling
+  conforms: true
+  evidence: Documented per-class limits with rate-limit response headers and 429 status.
+- id: request-id-tracing
+  conforms: true
+  evidence: request_id returned on both success (meta) and error envelopes.

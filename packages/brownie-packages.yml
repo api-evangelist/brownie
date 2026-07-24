@@ -1,0 +1,28 @@
+generated: '2026-07-18'
+method: searched
+source: https://docs.incidentfox.ai/api-reference/introduction
+note: >-
+  The official API reference documents first-party SDKs with the install
+  commands below. As of this probe the packages were NOT resolvable on the
+  public registries (both returned HTTP 404) - likely unpublished/withdrawn
+  after the repo was archived (2026-05-31). Recorded as first-party (official)
+  per the vendor docs, with verified: false and the registry probe status.
+packages:
+- language: python
+  registry: pypi
+  name: incidentfox
+  url: https://pypi.org/project/incidentfox/
+  install: pip install incidentfox
+  official: true
+  verified: false
+  registry_status: 404
+  source: https://docs.incidentfox.ai/api-reference/introduction
+- language: javascript
+  registry: npm
+  name: "@incidentfox/sdk"
+  url: https://www.npmjs.com/package/@incidentfox/sdk
+  install: npm install @incidentfox/sdk
+  official: true
+  verified: false
+  registry_status: 404
+  source: https://docs.incidentfox.ai/api-reference/introduction

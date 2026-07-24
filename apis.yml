@@ -1,22 +1,150 @@
 aid: brownie
-name: Brownie
-description: Brownie is a company surfaced as a portfolio company of y-combinator and added to the API
-  Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+name: IncidentFox (Brownie)
+description: >-
+  IncidentFox (the company was surfaced in the API Evangelist network under its
+  Y Combinator portfolio codename "Brownie") is an open-source, AI-powered SRE
+  platform that automates production incident investigation and response. Its
+  multi-agent system triages alerts, queries logs, metrics, traces and
+  deployment history across 300+ integrations (Kubernetes, AWS, Datadog,
+  Grafana, Prometheus, Sentry, Coralogix, and more), correlates signals, finds
+  root causes, and proposes remediation - operating primarily from Slack,
+  Microsoft Teams, or Google Chat with human approval gates on all write
+  actions. IncidentFox exposes a REST API (base https://api.incidentfox.ai/api/v1)
+  for triggering investigations, polling status, and managing hierarchical team
+  configuration, authenticated with team/admin bearer tokens or OIDC/SSO. It
+  ships as Apache-2.0 open source (with a Business Source License security
+  layer) or as managed SaaS with self-hosted and on-premises options.
 url: https://raw.githubusercontent.com/api-evangelist/brownie/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
 x-backed-by:
 - y-combinator
-x-tier: stub
-x-tier-reason: portfolio-lead
+x-tier: enriched
+x-tier-reason: portfolio-lead-enriched
+x-former-name: Brownie
+x-operating-name: IncidentFox
+x-yc-batch: W2026
+x-repo-status: archived-2026-05-31
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://incidentfox.ai/public/logo.png
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-18'
 tags:
 - Company
-apis: []
+- Incident Response
+- SRE
+- AIOps
+- Observability
+- DevOps
+- Artificial Intelligence
+- Developer Tools
+- Automation
+- Open Source
+apis:
+- name: IncidentFox REST API
+  description: >-
+    Programmatic access to trigger AI-driven incident investigations, poll
+    investigation status and results, and read/update hierarchical team
+    configuration. Authenticated with team or admin bearer tokens
+    (tokid.toksecret / admin.tokensecret) or OIDC JWTs. JSON request/response
+    with a data/meta envelope, request_id tracing, and rate limiting.
+  humanURL: https://docs.incidentfox.ai/api-reference/introduction
+  baseURL: https://api.incidentfox.ai/api/v1
+  tags:
+  - Incident Response
+  - SRE
+  - Automation
+  properties:
+  - type: Authentication
+    url: authentication/brownie-authentication.yml
+  - type: Conventions
+    url: conventions/brownie-conventions.yml
+  - type: ErrorCatalog
+    url: errors/brownie-problem-types.yml
+  - type: RateLimits
+    url: rate-limits/brownie-rate-limits.yml
+  - type: Lifecycle
+    url: lifecycle/brownie-lifecycle.yml
+  - type: MCPServer
+    url: mcp/brownie-mcp.yml
+  - type: DataModel
+    url: data-model/brownie-data-model.yml
+  - type: Webhooks
+    url: asyncapi/brownie-webhooks.yml
+common:
+- type: DeveloperPortal
+  url: https://docs.incidentfox.ai/
+- type: Documentation
+  url: https://docs.incidentfox.ai/
+- type: APIReference
+  url: https://docs.incidentfox.ai/api-reference/introduction
+- type: GettingStarted
+  url: https://docs.incidentfox.ai/quickstart
+- type: Quickstart
+  url: https://docs.incidentfox.ai/quickstart
+- type: Support
+  url: mailto:support@incidentfox.ai
+- type: GitHubOrganization
+  url: https://github.com/incidentfox
+- type: TermsOfService
+  url: https://incidentfox.ai/terms.html
+- type: PrivacyPolicy
+  url: https://incidentfox.ai/privacy.html
+- type: SignUp
+  url: https://slack.incidentfox.ai/slack/install
+- type: LLMsTxt
+  url: llms/brownie-llms.txt
+- type: Authentication
+  url: authentication/brownie-authentication.yml
+- type: Conventions
+  url: conventions/brownie-conventions.yml
+- type: ErrorCatalog
+  url: errors/brownie-problem-types.yml
+- type: RateLimits
+  url: rate-limits/brownie-rate-limits.yml
+- type: Lifecycle
+  url: lifecycle/brownie-lifecycle.yml
+- type: MCPServer
+  url: mcp/brownie-mcp.yml
+- type: DataModel
+  url: data-model/brownie-data-model.yml
+- type: Packages
+  url: packages/brownie-packages.yml
+- type: Webhooks
+  url: asyncapi/brownie-webhooks.yml
+- type: Conformance
+  url: conformance/brownie-conformance.yml
+- type: Compliance
+  url: security/brownie-trust-center.yml
+- type: TrustCenter
+  url: security/brownie-trust-center.yml
+- type: VulnerabilityDisclosure
+  url: security/brownie-vulnerability-disclosure.yml
+- type: Security
+  url: https://incidentfox.ai/vulnerability.html
+- type: DomainSecurity
+  url: security/brownie-domain-security.yml
+- type: AgentSkill
+  url: skills/_index.yml
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+x-enrichment:
+  date: '2026-07-19'
+  status: backfilled
+  pass: local-v1
+  note: backfilled from .gitignore signal + verified work evidence
