@@ -2,12 +2,10 @@ generated: '2026-07-18'
 method: derived
 status: candidate
 source: https://docs.incidentfox.ai/api-reference/introduction
-note: >-
-  No official hosted/remote IncidentFox MCP server was found. IncidentFox is
-  itself an MCP *client* platform (it consumes custom MCP tools and 300+
-  integrations to run investigations). The tools below are a CANDIDATE MCP
-  surface derived one-per-operation from the documented REST API so an agent
-  could drive IncidentFox programmatically.
+note: No official hosted/remote IncidentFox MCP server was found. IncidentFox is itself an MCP *client*
+  platform (it consumes custom MCP tools and 300+ integrations to run investigations). The tools below
+  are a CANDIDATE MCP surface derived one-per-operation from the documented REST API so an agent could
+  drive IncidentFox programmatically.
 server:
   name: incidentfox
   transport: http
@@ -27,3 +25,9 @@ tools:
 - name: list_teams
   description: List teams in the organization (admin token).
   source_operation: GET /api/v1/admin/teams
+deployment:
+  mode: none
+  verified: derived
+  tools: 5
+  checked: '2026-08-12'
+  source: catalog MCP census
