@@ -51,6 +51,17 @@ tags:
 - Artificial Intelligence
 - Developer Tools
 - Automation
+- Open-Source
+tags_raw:
+- Company
+- Incident Response
+- SRE
+- AIOps
+- Observability
+- DevOps
+- Artificial Intelligence
+- Developer Tools
+- Automation
 - Open Source
 apis:
 - name: IncidentFox REST API
