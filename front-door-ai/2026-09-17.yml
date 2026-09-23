@@ -1,0 +1,31 @@
+# Front Door AI Index — brownie — 2026-09-17
+# AI vocabulary counted on the provider's root page. Generated; do not edit.
+# `score` is null unless ownership is `own` — see front_door_ai.py.
+front_door_ai:
+  slug: brownie
+  lexicon_version: '1.0'
+  probed_at: '2026-09-17'
+  host: www.incidentfox.ai
+  final_host: www.incidentfox.ai
+  ownership: own
+  owner: brownie
+  shares_host_with: null
+  inherited_from: null
+  verdict: scored
+  score: 23
+  host_score: 23
+  density: 14.4
+  words: 1597
+  tiers:
+    agentic: 4
+    core: 17
+    model: 2
+  ambiguous: 11
+  top_terms:
+    AI: 15
+    agent: 11
+    MCP: 3
+    ChatGPT: 2
+    AI agent: 1
+    LLMs: 1
+    ML: 1
