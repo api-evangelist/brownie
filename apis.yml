@@ -68,7 +68,8 @@ tags:
 - Artificial Intelligence
 - Developer Tools
 - Automation
-- Open-Source
+- Open Source
+- Incident Management
 tags_raw:
 - Company
 - Incident Response
@@ -80,6 +81,8 @@ tags_raw:
 - Developer Tools
 - Automation
 - Open Source
+- Open-Source
+- Incident Management
 apis:
 - name: IncidentFox REST API
   description: >-
